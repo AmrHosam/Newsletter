@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Amr Hossam",
-  "license": "ISC"
+  "license": "ISC",
   "dependencies": {
     "express":"*",
     "body-parser":"*",
