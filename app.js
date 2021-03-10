@@ -45,10 +45,10 @@ app.post("/", function(req, res){
     const request = https.request(url, options, function(response){
 
         if(response.statusCode === 200) {
-            res.send("Successfully subscribed!")
+            res.sendFile(__dirname + "/success.html")
         }
         else {
-            res.send("Ther was an error with signin up, please try again!");
+            res.sendFile(__dirname + "/failure.html");
         }
         response.on("data", function(data){
             console.log(JSON.parse(data));
@@ -56,4 +56,8 @@ app.post("/", function(req, res){
     });
     request.write(jsonData);
     request.end();
+});
+
+app.post("/failure", function(req, res){
+    res.redirect("/");
 });
