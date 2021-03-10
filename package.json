@@ -8,4 +8,10 @@
   },
   "author": "Amr Hossam",
   "license": "ISC"
+  "dependencies": {
+    "express":"*",
+    "body-parser":"*",
+    "request":"*",
+    "https":"*"
+ }
 }
